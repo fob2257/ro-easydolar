@@ -3,20 +3,21 @@ var bancos = function () {
         type: 'GET',
         url: `http://198.199.102.31:3000/bancos`,
         success: function (json) {
+            console.log(json.data)
             var misBancos = json.data.filter(function (x, i) {
-                if (i == 0 || //Banamex
-                    i == 1 || //Banbajio
-                    i == 2 || //Banco azteca
-                    i == 4 || //BBVA
-                    i == 5 || //Banorte
-                    i == 9 || //HSBC
-                    i == 10 || //Inbursa
-                    i == 15 || //Santander
+                if (x.banco == "Banamex" || 
+                    x.banco == "BanBajío" || 
+                    x.banco == "Banco Azteca" || 
+                    x.banco == "BBVA Bancomer" || 
+                    x.banco == "Banorte" || 
+                    x.banco == "HSBC" || 
+                    x.banco == "Inbursa" ||
+                    x.banco == "Santander" ||
                     i == 16) { //SAT
                     return x
                 }
             })
-            // console.log('bancos\n', misBancos)
+            console.log('bancos\n', misBancos)
             $('#bancosInfo').html('')
             misBancos.forEach(function (banco, index) {
                 if (banco.dolar['compra'] != undefined) {
