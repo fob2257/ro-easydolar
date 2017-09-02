@@ -20,16 +20,21 @@
                 url: '../send_mail.php',
                 type: 'post',
                 dataType: 'json',
+                beforeSend: function () {
+                    $('.send-btn').html(`<img src="img/spinner.gif">`);
+                },
                 success: function (data) {
                     /** Server response */
                     if (data.status == '0') {
                         $('.send-btn').prop('disabled', false);
+                        $('.send-btn').html("");
                         $('.send-btn').html("Enviar");
                         $('.alert-danger').show();
 
                     }
                     if (data.status == '1') {
                         $('.send-btn').prop('disabled', false);
+                        $('.send-btn').html("");
                         $('.send-btn').html("Enviar");
                         $('#contacto-form')[0].reset();
                         $('.input-group').removeClass('has-success').removeClass('has-error');
@@ -39,6 +44,7 @@
                 },
                 error: function (data) {
                     $('.send-btn').prop('disabled', false);
+                    $('.send-btn').html("");
                     $('.send-btn').html("Enviar");
                     $('.alert-danger').show();
                 }
@@ -46,4 +52,4 @@
             return false; /** Evitar el submit normal */
         }
     });
-} ());
+}());

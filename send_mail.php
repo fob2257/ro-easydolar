@@ -23,7 +23,7 @@
 	
 	$mail->setFrom = $email;
 	$mail->FromName = $nombre;
-	$mail->AddAddress('inti.industrial.contacto@gmail.com');			// A quien se le envia / pueden ser varios
+	$mail->AddAddress('fob2257@gmail.com');			// A quien se le envia / pueden ser varios
 	//$mail->AddAddress('contacto@rosolutions.com.mx');
 	$mail->addReplyTo($email);
 

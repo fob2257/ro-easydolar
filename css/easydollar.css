@@ -6,9 +6,6 @@ html, body{
 }
 body {
     background-color: rgb(90,90,90);
-    /* background-image: url('../img/pinbw-mini.png'); */
-    background-size: 8%;
-    background-position: center;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.3px;
 }
@@ -211,14 +208,12 @@ header .easy-outer{
 }
 header .easy{
     height: 95%;
-    background: url(../img/logo.png) no-repeat;
+    background: url('../img/logo.png') no-repeat;
     background-size: 90%;
     background-position: center;
 }
 header .iphone{
     margin: 0 15%;
-	/* margin-right: auto;
-	margin-left: auto; */
 	width: 320px;
 	height: 672px;
 	background: url('../img/iphone-front.png') no-repeat;
@@ -233,11 +228,33 @@ header .iphone .screen-cap{
     height: 497.28px;
     margin-left: 23px;
     margin-top: 92px;
-    background: url(../img/screenshots/app-1.png) no-repeat;
+    background: url('../img/screenshots/app-1.png') no-repeat;
     background-size: 100%;
     position: absolute;
 }
-
+@media screen and (max-width:768px) {
+    #inicio-cover .row > div.col-md-6:nth-child(1){
+        padding: 10% 0;
+    }
+    header .easy-outer{
+        background-color: rgba(0,0,0,0.8);
+        height: 200px;
+    }
+    header .iphone {
+        margin: 0 auto;
+        width: 265px;
+        height: 560px;
+    }
+    header .iphone .screen-cap {
+        width: 229.46px;
+        height: 410.28px;
+        margin-left: 19px;
+        margin-top: 78px;
+    }
+    .black-space {
+        height: 60%;
+    }
+}
 /******************************/
 /** Intro */
 /******************************/
@@ -250,6 +267,12 @@ header .iphone .screen-cap{
     padding: 0 10%;
     font-weight: 300;
     color: rgb(255,255,255);
+}
+@media screen and (max-width:768px) {
+    .intro-content-box h1 {
+        font-size: 25px;
+        padding: 0 5%;
+    }
 }
 /******************************/
 /** Moto X */
@@ -324,7 +347,28 @@ header .iphone .screen-cap{
     background: url('../img/google-store.png') no-repeat;
     background-size: 100%;
 }
-
+@media screen and (max-width:768px) {
+    #moto .carousel-android {
+        width: 265px;
+        height: 495px;
+    }
+    #moto .carousel{
+        padding: 52px 40px 0px 18px;
+    }
+    #moto .info-content{
+        margin-top: 0;
+        margin-right: 0;
+    }
+    #moto .info-content h2{
+        text-align: none;
+    }
+    #moto .info-content p {
+        font-size: 20px;
+    }
+    #moto .stores .boton {
+        width: 45%;
+    }
+}
 /******************************/
 /** Bancos */
 /******************************/
@@ -341,19 +385,17 @@ header .iphone .screen-cap{
 }
 #bancos .info-cover{
     border-radius: 25px;
-    height: 50vh;
+    height: auto;
     background-image: url(../img/trade.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
 }
 #bancos .info-content-box{
+    padding: 5% 0;
     height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,0.5);
-}
-#bancos .info-box-inner{
-    padding-top: 15%;
 }
 #bancos .info-box-inner h2{
     color: rgb(255,255,255);
@@ -367,24 +409,21 @@ header .iphone .screen-cap{
 #bancos .borderless td{
     border: none;
 }
-
+@media screen and (max-width:768px) {
+    #bancos .info-content-box{
+        padding: 0;
+    }
+    #bancos .info-box-inner h2 {
+        padding: 5%;
+        font-size: 22px;
+    }
+    #bancos table {
+        margin: 0 auto;
+    }
+}
 /******************************/
 /** Mensaje */
 /******************************/
-/*#mensaje-cover{
-    height: 50vh;
-    background-image: url("../img/servicio.jpg");
-    background-size: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    background-attachment: fixed;
-} 
-.mensaje-content-box{
-    background-color: rgba(0,0,0,0.6);
-    width: 100%;
-    height: 100%;
-}*/
 #mensaje-cover{
     background-color: rgb(0,0,0);
     padding: 5% 0;
@@ -400,12 +439,19 @@ header .iphone .screen-cap{
     padding: 1% 5% 0;
     color: rgb(255,255,255);
 }
-
+@media screen and (max-width:768px) {
+    #mensaje .pin{
+        background-size: 20%;
+    }
+    .mensaje-content-box h1 {
+        font-size: 22px;
+    }
+}
 /******************************/
 /** Contacto */
 /******************************/
 #contacto{
-    height: 500px;
+    height: 600px;
 }
 #contacto-cover{
     height: 100%;
@@ -467,6 +513,9 @@ fieldset{
 .send-btn:focus {
     background-color: rgb(6,167,125);
     border-color: rgb(255,255,255);
+}
+.send-btn img{
+    width: 30%;
 }
 @media screen and (max-width:768px) {
     .contacto-inner.text-center{
@@ -559,9 +608,12 @@ fieldset{
     #footer > .container{
         text-align: center;
     }
-    #footer div.col-md-6:nth-child(2) {
-         padding-right: 0; 
+    #footer div.col-md-6:nth-child(1) {
+        padding-right: 0;
     }
+    #footer div.col-md-6:nth-child(2) {
+        padding-right: 15px; 
+   }
     .footer-social, #ro-footeri{
         padding-top: 5%;
     }
