@@ -1,0 +1,568 @@
+/******************************/
+/** Global */
+/******************************/
+html, body{
+    height: 100%;
+}
+body {
+    background-color: rgb(90,90,90);
+    /* background-image: url('../img/pinbw-mini.png'); */
+    background-size: 8%;
+    background-position: center;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.3px;
+}
+body::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: rgb(244,255,248);
+}
+body::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: rgb(244,255,248);
+}
+body::-webkit-scrollbar-thumb
+{
+	background-color: rgb(53,42,52);
+}
+footer, #moto, #bancos{
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
+.flex-vertical-center {
+    display: flex;
+    align-items: center; 
+}
+.row-inside-wrapper {
+    width: 100%;
+    height: 99.2%;
+}
+.black-background {
+    background-color: rgba(0,0,0,0.25);
+    height: inherit;
+    width: inherit;
+}
+.black-space{
+    background-color: rgb(0,0,0);
+    height: 110px;
+}
+.animated {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+/******************************/
+/** Navbar */
+/******************************/
+#navbar-easy {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: transparent; 
+    border: none;
+    margin-top: 2%;
+    margin-bottom: 0px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.navbar-header .navbar-brand img{
+    height: 45px;
+    margin: -10% 0;
+}
+#navbar-easy-ul{
+    overflow: hidden !important;
+}
+#navbar-easy-ul ul li a{
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgb(255,255,255);
+}
+.bignav{
+    height: 100px !important;
+    background-color: transparent !important;
+    transition: 0.3s !important;
+    -webkit-transition: 0.3s !important;
+    -moz-transition: 0.3s !important;
+}
+.smallnav{
+    height: 50px !important;
+    background-color: rgba(0,0,0,0.7) !important;
+    transition: 0.3s !important;
+    -webkit-transition: 0.3s !important;
+    -moz-transition: 0.3s !important;
+}
+.smallnav ul li a{
+    color: rgb(255,255,255) !important;
+}
+#navbar-easy-ul ul li a:before{
+    content: "";
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(164,207,57);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+#navbar-easy-ul ul li a:hover:before{
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+#navbar-easy-ul ul li a:hover{
+    color: rgb(164,207,57) !important;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+       color: rgb(164,207,57) !important;
+       background-color: transparent;
+}
+.logo-invisible{
+    display: none !important;
+    transition: 3s !important;
+    -webkit-transition: 3s !important;
+    -moz-transition: 3s !important;
+}
+.logo-visible{
+    display: auto !important;
+    transition: 3ms !important;
+    -webkit-transition: 3ms !important;
+    -moz-transition: 3ms !important;
+}
+@media screen and (max-width:767px) {
+    .bignav{
+        height: 50px !important;
+        background-color: rgb(255,255,255) !important;
+    }
+    #navbar-easy {
+        display: block;
+        align-items: normal;
+        margin-top: 0 !important;
+    }
+    #navbar-easy .navbar-nav li a{
+        color: rgb(90,90,90) !important;
+    }
+    #navbar-easy .navbar-header{
+        background-color: rgb(255,255,255) !important;
+
+    }
+    #navbar-easy-ul{
+        background-color: rgb(255,255,255);
+    }
+}
+
+/******************************/
+/** Inicio */
+/******************************/
+#inicio-cover {
+    height: 100vh;
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* overflow: hidden; */
+    background-attachment: fixed;
+}
+.inicio-content-box{
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.inicio-content-box .row{
+    margin-top: 13%;
+}
+header .easy-outer{
+    background-color: rgb(0,0,0);
+    border-radius: 50px;
+    height: 320px;
+    margin: 0 50px;
+}
+header .easy{
+    height: 95%;
+    background: url(../img/logo.png) no-repeat;
+    background-size: 90%;
+    background-position: center;
+}
+header .iphone{
+    margin: 0 15%;
+	/* margin-right: auto;
+	margin-left: auto; */
+	width: 320px;
+	height: 672px;
+	background: url('../img/iphone-front.png') no-repeat;
+	background-size: 100%;
+}
+header .iphone .screen-cap{
+    /* width: 36.3%;
+    height: 74%;
+    margin-left: 3%;
+    margin-top: 12%; */
+    width: 277.46px;
+    height: 497.28px;
+    margin-left: 23px;
+    margin-top: 92px;
+    background: url(../img/screenshots/app-1.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+}
+
+/******************************/
+/** Intro */
+/******************************/
+#intro{
+    background-color: rgb(0,0,0);
+    padding: 5% 0;
+}
+.intro-content-box h1{
+    font-size: 30px;
+    padding: 0 10%;
+    font-weight: 300;
+    color: rgb(255,255,255);
+}
+/******************************/
+/** Moto X */
+/******************************/
+#moto{
+    background-color: rgb(255,255,255);
+    font-weight: 300;
+}
+#moto .container-fluid{
+    padding: 5% 20px;
+}
+#moto .carousel-android{
+    margin-right: auto;
+    margin-left: auto;
+    width: 320px;
+    height: 600px;
+    background: url('../img/motox.png') no-repeat;
+    background-size: 100%;
+}
+#moto .carousel{
+	position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 63px 4px 0px 6px;
+    width: 289px;
+}
+#moto .carousel-indicators .active{
+	width: 15px;
+	height: 15px;
+	background: rgb(255,255,255);
+}
+#moto .carousel-indicators{
+	bottom: -40px;
+}
+#moto .carousel-indicators li{
+	display: inline-block;
+	margin: 1px;
+	width: 15px;
+	height: 15px;
+	border: 1px solid rgb(255,255,255);
+	border-radius: 10px;
+	text-indent: -999px;
+	cursor: pointer;
+}
+#moto .info-content{
+    margin-top: 25%;
+    margin-right: 5%;
+}
+#moto .info-content h2{
+    text-align: justify;
+}
+#moto .info-content p{
+    padding-top: 2%;
+    font-size: 15px;
+}
+#moto .stores{
+    height: 90px;
+}
+#moto .stores a:hover{
+    text-decoration: none;
+}
+#moto .stores .boton{
+    display: inline-block;
+    height: 80%;
+    width: 30%;
+}
+#moto .stores .iphone{
+    background: url('../img/iphone-store.png') no-repeat;
+    background-size: 100%;
+}
+#moto .stores .google{
+    background: url('../img/google-store.png') no-repeat;
+    background-size: 100%;
+}
+
+/******************************/
+/** Bancos */
+/******************************/
+#bancos{
+    background-color: rgb(255,255,255);
+    height: auto;
+    padding-bottom: 2%;
+}
+#bancos .info-cover-outter{
+    margin-top: 10%;
+}
+#bancos .info-cover, #bancos .info-content-box{
+    border-radius: 25px;
+}
+#bancos .info-cover{
+    border-radius: 25px;
+    height: 50vh;
+    background-image: url(../img/trade.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat
+}
+#bancos .info-content-box{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+#bancos .info-box-inner{
+    padding-top: 15%;
+}
+#bancos .info-box-inner h2{
+    color: rgb(255,255,255);
+    padding: 0 4%;
+    text-align: justify;
+}
+#bancos table{
+    width: 70%;
+    margin: 0 15%;
+}
+#bancos .borderless td{
+    border: none;
+}
+
+/******************************/
+/** Mensaje */
+/******************************/
+/*#mensaje-cover{
+    height: 50vh;
+    background-image: url("../img/servicio.jpg");
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-attachment: fixed;
+} 
+.mensaje-content-box{
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+}*/
+#mensaje-cover{
+    background-color: rgb(0,0,0);
+    padding: 5% 0;
+}
+#mensaje .pin{
+    height: 135px;
+    background-image: url('../img/pinbw.png');
+    background-size: 10%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mensaje-content-box h1{
+    padding: 1% 5% 0;
+    color: rgb(255,255,255);
+}
+
+/******************************/
+/** Contacto */
+/******************************/
+#contacto{
+    height: 500px;
+}
+#contacto-cover{
+    height: 100%;
+    background-image: url("../img/servicio.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    /* background-attachment: fixed; */
+}
+.contacto-content-box{
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;   
+}
+#contacto-cover .container{
+    padding: 3% 0;
+}
+#contacto h3{
+    color: rgb(255,255,255);
+}
+.alert-success, .alert-danger{
+    display: none;
+}
+.control-label{
+    width: 25%;
+    color: rgb(255,255,255);
+}
+.inputGroupContainer{
+    width: 55%;
+}
+.input-group{
+    display: initial;
+}
+.input-group .form-control{
+    border-radius: 0;
+}
+fieldset{
+    padding: 0 10% 2%;
+}
+.mensaje-form, .mensaje-form .error{
+    padding: 0 !important;
+    margin: 0!important;
+}
+.mensaje-form .error{
+    font-size: 11px;
+    color: rgb(255,255,255);
+}
+.send-btn{
+    border-width: 3px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 400;
+    border-color: rgb(255,255,255);
+    background-color: transparent;
+    color: rgb(255,255,255);
+}
+.send-btn:hover,
+.send-btn:focus {
+    background-color: rgb(6,167,125);
+    border-color: rgb(255,255,255);
+}
+@media screen and (max-width:768px) {
+    .contacto-inner.text-center{
+        display: none;
+    }
+    #contacto .col-md-6{
+        padding: 0 20%;
+    }
+    .control-label{
+        text-align: start !important;
+        width: 55%;
+    }
+    .inputGroupContainer{
+        width: inherit;
+    }
+    .send-btn{
+        width: initial;
+    }
+}
+/******************************/
+/** Footer */
+/******************************/
+#footer{
+    padding: 5% 0;
+}
+#footer div.col-md-6 ul{
+    color: rgb(255,255,255);
+    font-size: 15px;
+}
+#footer div.col-md-6 ul li a{
+    color: rgb(255,255,255);
+    text-decoration: none;
+}
+#footer div.col-md-6 ul li a:hover{
+    color: rgb(164,207,57);
+}
+#footer div.col-md-6:nth-child(1){
+    padding-right: 15%;
+}
+#footer div.col-md-6:nth-child(1) ul { 
+    padding: 0 20px;
+    list-style:none; 
+}
+#footer div.col-md-6:nth-child(1) li { 
+    margin-bottom:10px; 
+}
+#footer div.col-md-6:nth-child(1) li:nth-child(2):before {    
+    font-family: 'FontAwesome';
+    content: '\f095';
+    margin:0 5px 0 -15px;
+}
+#footer div.col-md-6:nth-child(1) li:nth-child(1):before {    
+    font-family: 'FontAwesome';
+    content: '\f124';
+    margin:0 5px 0 -15px;
+}
+#footer div.col-md-6:nth-child(1) li:nth-child(3):before {    
+    font-family: 'FontAwesome';
+    content: '\f0e0';
+    margin:0 5px 0 -15px;
+}
+.footer-social{
+    text-align: center;
+}
+.footer-social a {
+	margin-left: 15px;
+	color: #FFF;
+	font-size: 3em;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+.footer-social a:hover{
+    text-decoration: none;
+    color: rgb(164,207,57);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+	cursor: pointer;	
+}
+#ro-footeri p{
+    color: rgb(255,255,255);
+    margin: 0;
+}
+#ro-footeri p a{
+    color: rgb(164,207,57);
+}
+@media screen and (max-width:768px) {
+    footer{
+        padding: 10% 0;
+    }
+    #footer > .container{
+        text-align: center;
+    }
+    #footer div.col-md-6:nth-child(2) {
+         padding-right: 0; 
+    }
+    .footer-social, #ro-footeri{
+        padding-top: 5%;
+    }
+}
