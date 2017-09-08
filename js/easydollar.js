@@ -3,7 +3,6 @@ var bancos = function () {
         type: 'GET',
         url: `http://198.199.102.31:3000/bancos`,
         success: function (json) {
-            console.log(json.data)
             var misBancos = json.data.filter(function (x, i) {
                 if (x.banco == "Banamex" || 
                     x.banco == "BanBajío" || 
@@ -13,11 +12,11 @@ var bancos = function () {
                     x.banco == "HSBC" || 
                     x.banco == "Inbursa" ||
                     x.banco == "Santander" ||
-                    i == 16) { //SAT
+                    x.banco == "SAT, Servicio de Administración Tributaria") {
                     return x
                 }
             })
-            console.log('bancos\n', misBancos)
+            // console.log('bancos\n', misBancos)
             $('#bancosInfo').html('')
             misBancos.forEach(function (banco, index) {
                 if (banco.dolar['compra'] != undefined) {

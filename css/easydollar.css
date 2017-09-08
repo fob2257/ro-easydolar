@@ -228,7 +228,7 @@ header .iphone .screen-cap{
     height: 497.28px;
     margin-left: 23px;
     margin-top: 92px;
-    background: url('../img/screenshots/app-1.png') no-repeat;
+    background: url('../img/screenshots/iphone1.jpg') no-repeat;
     background-size: 100%;
     position: absolute;
 }
@@ -259,7 +259,7 @@ header .iphone .screen-cap{
 }
 @media screen and (max-width:425px) {
     .black-space {
-        height: 155px; /**60%*/
+        height: 250px; /**60%*/
     }
 }
 /******************************/
